@@ -16,8 +16,6 @@ knitr::opts_chunk$set(
 # BioMetrix
 
 <!-- badges: start -->
-[![GitHub issues](https://img.shields.io/github/issues/Dabiguina94/BioMetrix)](https://github.com/Dabiguina94/BioMetrix/issues)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/Dabiguina94/BioMetrix)](https://github.com/Dabiguina94/BioMetrix/pulls)
 <!-- badges: end -->
 
 The goal of `BioMetrix` is to ...
@@ -34,11 +32,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 BiocManager::install("BioMetrix")
 ```
 
-And the development version from [GitHub](https://github.com/Dabiguina94/BioMetrix) with:
-
-```{r 'install_dev', eval = FALSE}
-BiocManager::install("Dabiguina94/BioMetrix")
-```
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -51,17 +44,16 @@ library("BioMetrix")
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
 ```{r }
-matrix <- matrix(1:9, nrow = 3, ncol = 3)
-bio_sd(matrix)
-bio_mean(matrix)
+set.seed(0)
+matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
 
 You can also embed plots, for example:
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r matrix, echo = FALSE}
+bio_box(matrix)
 ```
 
 In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
@@ -72,7 +64,7 @@ Below is the citation output from using `citation('BioMetrix')` in R. Please
 run this yourself to check for any updates on how to cite __BioMetrix__.
 
 ```{r 'citation', eval = requireNamespace('BioMetrix')}
-print(citation("BioMetrix"), bibtex = TRUE)
+print(citation('BioMetrix'), bibtex = TRUE)
 ```
 
 Please note that the `BioMetrix` was only made possible thanks to many other R and bioinformatics software authors, which are cited either in the vignettes and/or the paper(s) describing this package.
@@ -85,7 +77,6 @@ Please note that the `BioMetrix` project is released with a [Contributor Code of
 
 * Continuous code testing is possible thanks to [GitHub actions](https://www.tidyverse.org/blog/2020/04/usethis-1-6-0/)  through `r BiocStyle::CRANpkg('usethis')`, `r BiocStyle::CRANpkg('remotes')`, and `r BiocStyle::CRANpkg('rcmdcheck')` customized to use [Bioconductor's docker containers](https://www.bioconductor.org/help/docker/) and `r BiocStyle::Biocpkg('BiocCheck')`.
 * Code coverage assessment is possible thanks to [codecov](https://codecov.io/gh) and `r BiocStyle::CRANpkg('covr')`.
-* The [documentation website](http://Dabiguina94.github.io/BioMetrix) is automatically updated thanks to `r BiocStyle::CRANpkg('pkgdown')`.
 * The code is styled automatically thanks to `r BiocStyle::CRANpkg('styler')`.
 * The documentation is formatted thanks to `r BiocStyle::CRANpkg('devtools')` and `r BiocStyle::CRANpkg('roxygen2')`.
 

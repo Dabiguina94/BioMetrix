@@ -10,7 +10,7 @@
 #' @examples
 #'  set.seed(0)
 #'  matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
-#' bio_sd(matrix)
+#'
 
 bio_sd <- function(matrix) {
     x <- apply(matrix, 2, sd)

@@ -12,6 +12,7 @@
 #'  matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 #'  bio_box(matrix)
 
+library(ggplot2)
 bio_box <- function(matrix) {
     df <- data.frame(matrix)
     colnames(df) <- paste("Columna", 1:ncol(matrix))
