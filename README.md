@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `BioMetrix` is to …
+The goal of `BioMetrix` is to calculate mean and standard desviation by
+columns and generate boxplots…
 
 ## Installation instructions
 
@@ -31,25 +32,18 @@ library("BioMetrix")
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+You can load this example data:
 
 ``` r
 set.seed(0)
 matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date.
-
-You can also embed plots, for example:
+You can also generate boxplots, for example:
 
     #> No id variables; using all as measure variables
 
 <img src="man/figures/README-matrix-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub!
 
 ## Citation
 
