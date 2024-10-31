@@ -1,4 +1,4 @@
-#' BioMetrix
+#' bio_mean
 #'@description
 #'A partir de una matriz de datos, calcula la media.
 #'
