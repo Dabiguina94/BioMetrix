@@ -1,6 +1,6 @@
-#'bio_box
-#'@description
-#'A partir de una matriz de datos, realiza grafico de cajas y bigotes.
+#' bio_box
+#' @description
+#' A partir de una matriz de datos, realiza grafico de cajas y bigotes.
 #'
 #' @param matrix numeric
 #'
@@ -9,8 +9,8 @@
 #' @import ggplot2
 #' @examples
 #' set.seed(0)
-#'  matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
-#'  bio_box(matrix)
+#' matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
+#' bio_box(matrix)
 
 bio_box <- function(matrix) {
     df <- data.frame(matrix)
