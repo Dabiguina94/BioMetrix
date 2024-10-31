@@ -50,8 +50,10 @@ library("BioMetrix")
 
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
+```{r }
+matrix <- matrix(1:9, nrow = 3, ncol = 3)
+bio_sd(matrix)
+bio_mean(matrix)
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.

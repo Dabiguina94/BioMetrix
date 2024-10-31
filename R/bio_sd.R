@@ -4,14 +4,15 @@
 #'
 #' @param matrix, numeric
 #'
-#' @return matrix, mean
+#' @return matrix, sd
 #' @export
 #'
 #' @examples
-#'  matrix <- matrix(1:9, nrow = 3, ncol = 3)
+#'  set.seed(0)
+#'  matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 #' bio_sd(matrix)
 
 bio_sd <- function(matrix) {
-    x <- sd(matrix)
+    x <- apply(matrix, 2, sd)
     return(x)
 }

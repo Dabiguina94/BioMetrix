@@ -1,6 +1,6 @@
 #' bio_mean
 #'@description
-#'A partir de una matriz de datos, calcula la media.
+#'A partir de una matriz de datos, calcula la media por columna.
 #'
 #' @param matrix, numeric
 #'
@@ -8,10 +8,11 @@
 #' @export
 #'
 #' @examples
-#' matrix <- matrix(1:9, nrow = 3, ncol = 3)
+#' set.seed(0)
+#'  matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 #' bio_mean(matrix)
 #'
 bio_mean <- function(matrix) {
-    x <- mean(matrix)
+    x <- colMeans(matrix)
     return(x)
 }

@@ -4,11 +4,6 @@
 # BioMetrix
 
 <!-- badges: start -->
-
-[![GitHub
-issues](https://img.shields.io/github/issues/Dabiguina94/BioMetrix)](https://github.com/Dabiguina94/BioMetrix/issues)
-[![GitHub
-pulls](https://img.shields.io/github/issues-pr/Dabiguina94/BioMetrix)](https://github.com/Dabiguina94/BioMetrix/pulls)
 <!-- badges: end -->
 
 The goal of `BioMetrix` is to …
@@ -27,13 +22,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 BiocManager::install("BioMetrix")
 ```
 
-And the development version from
-[GitHub](https://github.com/Dabiguina94/BioMetrix) with:
-
-``` r
-BiocManager::install("Dabiguina94/BioMetrix")
-```
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -47,14 +35,8 @@ What is special about using `README.Rmd` instead of just `README.md`?
 You can include R chunks like so:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+set.seed(0)
+matrix <- round(matrix(runif(30, min = 0, max = 100), nrow = 10, ncol = 3), 2)
 ```
 
 You’ll still need to render `README.Rmd` regularly, to keep `README.md`
@@ -62,7 +44,9 @@ up-to-date.
 
 You can also embed plots, for example:
 
-<img src="man/figures/README-pressure-1.png" width="100%" />
+    #> No id variables; using all as measure variables
+
+<img src="man/figures/README-matrix-1.png" width="100%" />
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub!
@@ -74,7 +58,7 @@ Please run this yourself to check for any updates on how to cite
 **BioMetrix**.
 
 ``` r
-print(citation("BioMetrix"), bibtex = TRUE)
+print(citation('BioMetrix'), bibtex = TRUE)
 #> To cite package 'BioMetrix' in publications use:
 #> 
 #>   Dabiguina94 (2024). _BioMetrix_. doi:10.18129/B9.bioc.BioMetrix
@@ -132,9 +116,6 @@ contributing to this project, you agree to abide by its terms.
 - Code coverage assessment is possible thanks to
   [codecov](https://codecov.io/gh) and
   *[covr](https://CRAN.R-project.org/package=covr)*.
-- The [documentation website](http://Dabiguina94.github.io/BioMetrix) is
-  automatically updated thanks to
-  *[pkgdown](https://CRAN.R-project.org/package=pkgdown)*.
 - The code is styled automatically thanks to
   *[styler](https://CRAN.R-project.org/package=styler)*.
 - The documentation is formatted thanks to
